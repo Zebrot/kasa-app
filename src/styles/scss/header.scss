@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        height: 68px;
+    }
+    &__links {
+        display: flex;
+        gap: 57px;
+        line-height: 143%;
+        font-size: 24px;
+    }
+}

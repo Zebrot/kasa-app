@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  align-items: center;
+  background: black;
+  color: white;
+  margin: 0;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__logo {
+  height: 68px;
+}
+.navbar__links {
+  display: flex;
+  gap: 57px;
+  line-height: 143%;
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=header.css.map */
