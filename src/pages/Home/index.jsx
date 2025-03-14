@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
+import Banner from '../../components/Banner/index.jsx'
+import Card from '../../components/Card/index.jsx'
+import bannerImg from '../../assets/img/banner.png'
+import logements from '../../assets/logements.json'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  var cards = logements.map((x,i) => <Card link = {x.id} title = {x.title} imgUrl = {x.cover} key={x.id}/>)
+  console.log(cards)
+  
   return (
     <>
-      <h1>Bienvenue sur le site Kasa !</h1>
-      <p>Vous êtes sur la page d'accueil</p>
+      <Banner/>
+
+      <div className='logement-cards'>
+         {cards}
+      </div>
     </>
   )
 }

@@ -26,3 +26,13 @@ a {
     gap: 25px;
 }
 
+.logement-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 25px;
+    padding: 55px;
+    gap: 55px;
+    background: rgba(246, 246, 246, 1);
+
+}

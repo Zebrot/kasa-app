@@ -1,6 +1,12 @@
+import Collapse from '../../components/Collapse/index'
 function About() {
     return(
-        <h1>About us :</h1>
+        <div>
+            <h1>About us :</h1>
+            <Collapse title = 'About us'>
+                Bonjour la family cosi
+            </Collapse>
+        </div>
     )
 }
 
