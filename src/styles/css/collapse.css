@@ -1,5 +1,4 @@
 .collapse {
-  background: rgba(246, 246, 246, 0.45);
   width: fit-content;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -7,24 +6,37 @@
   border-bottom-left-radius: 5px;
   overflow: hidden;
 }
-.collapse h2 {
+.collapse__Title {
   background: rgb(255, 96, 96);
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
-  width: 582px;
   border-radius: 5px;
   padding: 10px 20px 10px 10px;
   cursor: pointer;
   color: white;
 }
-.collapse p {
-  display: block;
-  padding: 20px;
-  height: 0px;
+.collapse__Title__Arrow {
+  transition: 0.4s;
+  position: relative;
+}
+.show .collapse__Title__Arrow {
+  transform: rotate(180deg);
+  bottom: 1px;
+}
+.collapse__Content {
+  max-height: 0px;
+  transition: 0.4s;
+  background: rgba(246, 246, 246, 0.45);
   overflow: hidden;
+  box-sizing: border-box;
+}
+.collapse__Content p {
+  padding: 20px;
+}
+.show .collapse__Content {
+  max-height: 200px;
 }
 
 /*# sourceMappingURL=collapse.css.map */

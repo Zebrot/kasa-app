@@ -11,13 +11,15 @@
         top: 0;
         left: 0;
         display: block;
+        opacity: 30%;
         width: 100%;
         height: 100%;
-        opacity: 60%;
         background-color: black;
         content: ' ';
     }
-
+    &.dark::before {
+        opacity: 60%;
+    }
     h2 {
         font-family: Montserrat;
         position:absolute;
@@ -25,6 +27,7 @@
         transform: translateY(-50%);
         width: 100%;
         margin: 0;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
         text-align: center;
         color: white;
@@ -33,6 +36,15 @@
         line-height: 143%;
         vertical-align: bottom;
     
+    }
+    img {
+        object-fit: contain;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
     }
 }
 

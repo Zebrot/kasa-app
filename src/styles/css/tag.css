@@ -1,0 +1,15 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 115px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  background: rgb(255, 96, 96);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=tag.css.map */

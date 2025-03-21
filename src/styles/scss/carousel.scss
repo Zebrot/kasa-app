@@ -1,0 +1,44 @@
+.Carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+
+    img {
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__Options {
+        color: white;
+
+        &__Buttons {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0%;
+            width: 100%;
+
+            button {
+                cursor: pointer;
+                background : none;
+                border: none;
+                img {
+                    height: 80px;
+                }
+    
+            }
+
+        }
+
+        &__Count {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

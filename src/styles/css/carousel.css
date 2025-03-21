@@ -1,0 +1,39 @@
+.Carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.Carousel img {
+  height: 415px;
+  width: 100%;
+  object-fit: cover;
+}
+.Carousel__Options {
+  color: white;
+}
+.Carousel__Options__Buttons {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0%;
+  width: 100%;
+}
+.Carousel__Options__Buttons button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.Carousel__Options__Buttons button img {
+  height: 80px;
+}
+.Carousel__Options__Count {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=carousel.css.map */

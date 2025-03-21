@@ -2,14 +2,19 @@ import Banner from '../../components/Banner/index.jsx'
 import Card from '../../components/Card/index.jsx'
 import bannerImg from '../../assets/img/banner.png'
 import logements from '../../assets/logements.json'
+import {Link} from 'react-router-dom'
 
 function App() {
-  var cards = logements.map((x,i) => <Card link = {x.id} title = {x.title} imgUrl = {x.cover} key={x.id}/>)
+  var cards = logements.map((x,i) => 
+  <Link key = {i} to={'/logement'} state = {x}>  
+    <Card title = {x.title} imgUrl = {x.cover} key={x.id}/>
+  </Link>
+  );
   console.log(cards)
   
   return (
     <>
-      <Banner/>
+      <Banner img={bannerImg} dark="true">Chez vous, ici et ailleurs</Banner>
 
       <div className='logement-cards'>
          {cards}

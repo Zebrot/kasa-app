@@ -1,0 +1,14 @@
+.host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 96, 96, 1);
+    
+    &__hostname {
+        text-align: right;
+    }
+    &__picture{
+        border-radius: 100%;
+        width: 64px;
+    }
+}

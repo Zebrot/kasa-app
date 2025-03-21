@@ -1,0 +1,15 @@
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(255, 96, 96);
+}
+.host__hostname {
+  text-align: right;
+}
+.host__picture {
+  border-radius: 100%;
+  width: 64px;
+}
+
+/*# sourceMappingURL=host.css.map */

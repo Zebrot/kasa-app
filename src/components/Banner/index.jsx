@@ -1,10 +1,9 @@
 import '../../styles/css/banner.css'
-import bannerImg from '../../assets/img/banner.png'
-function Banner() { 
+function Banner({children, img, dark=false}) { 
     return (
-        <div className='banner'>
-            <img src = {bannerImg} alt='Une falaise au-dessus de la mer'/>
-            <h2>Chez vous, partout et ailleurs</h2>
+        <div className={'banner' + (dark ? ' dark' : '')}>
+            <img src = {img}/>
+            <h2>{children}</h2>
         </div>
     )
 }

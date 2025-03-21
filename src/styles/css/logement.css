@@ -1,0 +1,33 @@
+.logement__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.logement__infos__row {
+  display: flex;
+  justify-content: space-between;
+}
+.logement__infos__row .collapse {
+  width: 49%;
+}
+.logement__infos__titles h1 {
+  color: rgb(255, 96, 96);
+  font-weight: 500;
+  font-size: 36px;
+  margin: 0;
+}
+.logement__infos__titles h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+.logement__infos .host {
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+.logement__infos__tags {
+  display: flex;
+  gap: 10px;
+}
+
+/*# sourceMappingURL=logement.css.map */

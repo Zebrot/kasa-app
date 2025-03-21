@@ -1,0 +1,42 @@
+.logement {
+
+    &__infos{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+
+            .collapse {
+                width: 49%;
+            }
+        }
+
+        &__titles {
+            h1 {
+                color: rgba(255, 96, 96, 1);
+                font-weight: 500;
+                font-size: 36px;
+                margin: 0;
+            }
+            h2 {
+                margin: 0;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+
+        .host {
+            justify-self: flex-end;
+            align-self: flex-start;
+        }
+
+        &__tags {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+}

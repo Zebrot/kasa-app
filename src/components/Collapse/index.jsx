@@ -5,14 +5,16 @@ function Collapse ( {title, children} ) {
     const [isOpened, setOpened] = useState(false);
 
     return (
-        <div className='collapse'>
-            <h2>
+        <div className={'collapse ' + (isOpened ? 'show' : '')}>
+            <h2 className = 'collapse__Title' onClick={() => setOpened(!isOpened)}>
                 {title}
-                <img src = {arrow}/>
+                <img className='collapse__Title__Arrow' src = {arrow}/>
             </h2>
-            <p>
-                {children}
-            </p>    
+            <div className='collapse__Content'>
+                <p>
+                    {children}
+                </p>    
+            </div>
         </div>
     )
 }

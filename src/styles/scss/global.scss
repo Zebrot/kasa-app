@@ -18,21 +18,50 @@ a {
 
 .main-container {
     max-width: 1240px;
+    min-height: 80vh;
     margin: auto;
     margin-top: 25px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
 }
 
 .logement-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     border-radius: 25px;
     padding: 55px;
     gap: 55px;
     background: rgba(246, 246, 246, 1);
 
+}
+
+.unknown {
+    color: rgba(255, 96, 96, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        margin: 0;
+        font-size: 288px;
+    }
+    p {
+        font-size: 36px;
+    }
+    a {
+        color: black;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+}
+
+.aboutList {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1023px;
+    gap: 25px;
 }
