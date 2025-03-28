@@ -6,24 +6,24 @@ import nextArrow from '../../assets/next.svg'
 function Carousel({imgList}){
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = imgList.map((x,i) => 
-        <div className="Carousel__Slide" key={i}>
+        <div className="carousel__Slide" key={i}>
             <img src = {x}/>
         </div>
     );
 
     return (
-        <div className="Carousel">
+        <div className="carousel">
             {slides[currentSlide]}
-            {imgList.length > 1 && <div className="Carousel__Options">
-                <div className="Carousel__Options__Buttons">
-                    <button className="Carousel__Options__Buttons__Previous" onClick={() => setCurrentSlide(previous(currentSlide, imgList.length - 1))}>
+            {imgList.length > 1 && <div className="carousel__Options">
+                <div className="carousel__Options__Buttons">
+                    <button className="carousel__Options__Buttons__Previous" onClick={() => setCurrentSlide(previous(currentSlide, imgList.length - 1))}>
                         <img src = {prevArrow}/>
                     </button>
-                    <button className="Carousel__Options__Buttons__Next" onClick={() => setCurrentSlide(next(currentSlide, imgList.length - 1))}>
+                    <button className="carousel__Options__Buttons__Next" onClick={() => setCurrentSlide(next(currentSlide, imgList.length - 1))}>
                         <img src = {nextArrow}/>
                     </button>
                 </div>
-                <p className="Carousel__Options__Count"> 
+                <p className="carousel__Options__Count"> 
                     {currentSlide + 1} / {imgList.length} 
                 </p>
 

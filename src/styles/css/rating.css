@@ -2,5 +2,14 @@
   display: flex;
   gap: 5px;
 }
+.rating img {
+  height: 36px;
+}
+
+@media (max-width: 960px) {
+  .rating img {
+    height: 18px;
+  }
+}
 
 /*# sourceMappingURL=rating.css.map */

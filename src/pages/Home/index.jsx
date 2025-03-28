@@ -6,15 +6,14 @@ import {Link} from 'react-router-dom'
 
 function App() {
   var cards = logements.map((x,i) => 
-  <Link key = {i} to={'/logement'} state = {x}>  
+  <Link key = {i} to={`/logement?id=${x.id}`}>
     <Card title = {x.title} imgUrl = {x.cover} key={x.id}/>
   </Link>
   );
-  console.log(cards)
   
   return (
     <>
-      <Banner img={bannerImg} dark="true">Chez vous, ici et ailleurs</Banner>
+      <Banner img={bannerImg} dark="true">Chez vous, partout et ailleurs</Banner>
 
       <div className='logement-cards'>
          {cards}

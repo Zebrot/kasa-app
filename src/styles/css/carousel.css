@@ -1,17 +1,17 @@
-.Carousel {
+.carousel {
   position: relative;
   overflow: hidden;
   border-radius: 25px;
 }
-.Carousel img {
+.carousel img {
   height: 415px;
   width: 100%;
   object-fit: cover;
 }
-.Carousel__Options {
+.carousel__Options {
   color: white;
 }
-.Carousel__Options__Buttons {
+.carousel__Options__Buttons {
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -21,19 +21,31 @@
   left: 0%;
   width: 100%;
 }
-.Carousel__Options__Buttons button {
+.carousel__Options__Buttons button {
   cursor: pointer;
   background: none;
   border: none;
 }
-.Carousel__Options__Buttons button img {
+.carousel__Options__Buttons button img {
   height: 80px;
 }
-.Carousel__Options__Count {
+.carousel__Options__Count {
   position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media (max-width: 960px) {
+  .carousel {
+    border-radius: 15px;
+  }
+  .carousel img {
+    height: 255px;
+  }
+  .carousel__Options__Buttons button img {
+    height: 20px;
+  }
 }
 
 /*# sourceMappingURL=carousel.css.map */

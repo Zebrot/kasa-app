@@ -1,48 +1,60 @@
-import { useLocation } from "react-router"
 import Carousel from '../../components/Carousel'
 import Host from '../../components/Host'
 import Rating from '../../components/Rating'
 import Tag from '../../components/Tag'
 import Collapse from '../../components/Collapse'
 import '../../styles/css/logement.css'
+import logements from '../../assets/logements.json'
+import { useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 function FicheLogement() {
-    const logement = useLocation().state;
+    const id =  getIdFromURL();
 
+    const logement = logements.filter(x => x.id == id)[0];
     const tags = logement.tags.map((x,i) => <Tag value ={x} key={i}/>);
-    const equipments = logement.equipments.map(x => <li> {x} </li>);
+    const equipments = logement.equipments.map((x,i) => <li key={i}> {x} </li>);
+    
     return (
         <div className="logement">
             <Carousel imgList = {logement.pictures}/>
 
             <div className = 'logement__infos'>
-
-                <div className="logement__infos__row firstRow">
+                <div className='logement__infos__column leftColumn'>
                     <div className="logement__infos__titles">
                         <h1>{logement.title}</h1>
                         <h2>{logement.location}</h2>
                     </div>
-                    <Host host = {logement.host}/>
-                </div>  
-                <div className="logement__infos__row secondRow">
                     <div className='logement__infos__tags'>
                         {tags}
                     </div>
 
+                </div>
+                <div className='logement__infos__column rightColumn'>
+                    <Host host = {logement.host}/>
                     <Rating value={logement.rating}/>
                 </div>
-                <div className="logement__infos__row thirdRow">
+            </div>
+            <div className='logement__utilities'>
+                <Collapse className = "logement__infos__description" title="Description">
+                    {logement.description}
+                </Collapse>
 
-                    <Collapse className = "logement__infos__description" title="Description">
-                        {logement.description}
-                    </Collapse>
-
-                    <Collapse className = "logement__infos__equipements" title = "Équipements">
-                        {equipments}
-                    </Collapse>
-                </div>
+                <Collapse className = "logement__infos__equipements" title = "Équipements">
+                    {equipments}
+                </Collapse>
             </div>
         </div>
     )
 }
+
+function getIdFromURL() {
+    const [searchParams] = useSearchParams();
+    const id = searchParams.get("id");
+    return id;
+}
+
 export default FicheLogement
+

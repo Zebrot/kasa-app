@@ -44,4 +44,15 @@
   z-index: -1;
 }
 
+@media (max-width: 650px) {
+  .banner {
+    height: 111px;
+  }
+  .banner h2 {
+    font-size: 24px;
+    text-align: left;
+    padding-left: 16px;
+  }
+}
+
 /*# sourceMappingURL=banner.css.map */

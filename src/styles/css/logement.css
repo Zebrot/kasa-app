@@ -1,14 +1,16 @@
-.logement__infos {
+.logement {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.logement__infos__row {
+.logement__infos {
   display: flex;
   justify-content: space-between;
 }
-.logement__infos__row .collapse {
-  width: 49%;
+.logement__infos__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .logement__infos__titles h1 {
   color: rgb(255, 96, 96);
@@ -28,6 +30,39 @@
 .logement__infos__tags {
   display: flex;
   gap: 10px;
+}
+.logement__utilities {
+  display: flex;
+  justify-content: space-between;
+}
+.logement__utilities .collapse {
+  width: 49%;
+}
+
+@media (max-width: 960px) {
+  .logement__infos {
+    flex-direction: column;
+  }
+  .logement__infos__column {
+    gap: 15px;
+  }
+  .logement__infos__column.rightColumn {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .logement__infos h1 {
+    font-size: 18px;
+  }
+  .logement__infos h2 {
+    font-size: 14px;
+  }
+  .logement__utilities {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .logement__utilities .collapse {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=logement.css.map */

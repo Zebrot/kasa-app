@@ -12,9 +12,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
 
 .main-container {
   max-width: 1240px;
@@ -30,10 +27,13 @@ a:hover {
 .logement-cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   border-radius: 25px;
   padding: 55px;
   gap: 55px;
   background: rgb(246, 246, 246);
+  margin: auto;
+  width: 100%;
 }
 
 .unknown {
@@ -48,6 +48,7 @@ a:hover {
 }
 .unknown p {
   font-size: 36px;
+  text-align: center;
 }
 .unknown a {
   color: black;
@@ -62,6 +63,43 @@ a:hover {
   align-items: center;
   width: 1023px;
   gap: 25px;
+}
+
+@media (max-width: 1240px) {
+  .main-container {
+    max-width: 960px;
+  }
+  .logement-cards {
+    padding: 35px;
+    gap: 35px;
+  }
+  .aboutList {
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  .main-container {
+    max-width: 768px;
+  }
+  .logement-cards {
+    flex-direction: column;
+    background: none;
+    padding: 0;
+  }
+  .unknown h1 {
+    font-size: 96px;
+  }
+  .unknown p {
+    font-size: 18px;
+  }
+  .unknown a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .main-container {
+    margin: 20px;
+  }
 }
 
 /*# sourceMappingURL=global.css.map */

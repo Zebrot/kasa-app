@@ -29,6 +29,7 @@
   background: rgb(255, 96, 96);
   display: block;
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .card h2 {
@@ -39,6 +40,17 @@
   left: 20px;
   color: white;
   font-size: 18px;
+}
+
+@media (max-width: 1240px) {
+  .card {
+    width: 420px;
+  }
+}
+@media (max-width: 960px) {
+  .card {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=card.css.map */
