@@ -10,6 +10,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            &.rightColumn {
+                text-align: right;
+            }
         }
         &__titles {
             h1 {
@@ -24,12 +28,6 @@
                 font-size: 18px;
             }
         }
-
-        .host {
-            justify-self: flex-end;
-            align-self: flex-start;
-        }
-
         &__tags {
             display: flex;
             gap: 10px;

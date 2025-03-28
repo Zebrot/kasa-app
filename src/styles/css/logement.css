@@ -12,6 +12,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.logement__infos__column.rightColumn {
+  text-align: right;
+}
 .logement__infos__titles h1 {
   color: rgb(255, 96, 96);
   font-weight: 500;
@@ -22,10 +25,6 @@
   margin: 0;
   font-weight: 500;
   font-size: 18px;
-}
-.logement__infos .host {
-  justify-self: flex-end;
-  align-self: flex-start;
 }
 .logement__infos__tags {
   display: flex;
