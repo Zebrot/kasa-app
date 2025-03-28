@@ -1,19 +1,16 @@
 .logement {
-
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     &__infos{
         display: flex;
-        flex-direction: column;
-        gap: 25px;
+        justify-content: space-between;
 
-        &__row {
+        &__column {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-
-            .collapse {
-                width: 49%;
-            }
         }
-
         &__titles {
             h1 {
                 color: rgba(255, 96, 96, 1);
@@ -36,6 +33,42 @@
         &__tags {
             display: flex;
             gap: 10px;
+        }
+    }
+
+    &__utilities {
+        display: flex;
+        justify-content: space-between;
+        .collapse {
+            width: 49%;
+        }
+    }
+}
+
+@media (max-width : 960px) {
+    .logement {
+        &__infos {
+            flex-direction: column;
+            &__column{
+                gap: 15px;
+                &.rightColumn{
+                    flex-direction: row-reverse;
+                    align-items: center;
+                }
+            }
+            h1 {
+                font-size: 18px;
+            }
+            h2 {
+                font-size: 14px;
+            }
+        }
+        &__utilities {
+            flex-direction: column;
+            gap: 15px;
+            .collapse {
+                width: 100%;
+            }
         }
     }
 

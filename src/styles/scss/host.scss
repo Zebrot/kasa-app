@@ -6,9 +6,21 @@
     
     &__hostname {
         text-align: right;
+        font-size: 18px;
     }
     &__picture{
         border-radius: 100%;
         width: 64px;
+    }
+}
+
+@media (max-width: 540px) {
+    .host {
+        &__hostname {
+            font-size : 12px
+        }
+        &__picture {
+            width: 32px;;
+        }
     }
 }

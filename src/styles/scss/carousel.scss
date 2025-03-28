@@ -1,4 +1,4 @@
-.Carousel {
+.carousel {
     position: relative;
     overflow: hidden;
     border-radius: 25px;
@@ -39,6 +39,24 @@
             bottom: 10%;
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width : 960px) {
+    .carousel {
+        border-radius: 15px;    
+        img {
+            height: 255px;
+        }
+        &__Options {
+            &__Buttons {
+                button {
+                    img {
+                        height: 20px;
+                    }
+                }
+            }
         }
     }
 }
