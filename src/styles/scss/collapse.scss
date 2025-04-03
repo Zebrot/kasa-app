@@ -16,7 +16,8 @@
         padding: 10px 20px 10px 10px;
         cursor: pointer;
         color: white;
-        
+        font-size: 18px;
+
         &__Arrow {
             transition: 0.4s;
             position: relative;
@@ -38,6 +39,25 @@
         }
         .show &{
             max-height: 200px;
+        }
+    }
+}
+
+@media (max-width: 540px){
+    .collapse {
+        &__Title {
+            height: 30px;
+            font-size: 13px;
+
+            &__Arrow {
+                height: 16px;
+            }
+        }
+        &__Content {
+            p{
+                padding: 10px;
+                font-size: 12px;
+            }
         }
     }
 }

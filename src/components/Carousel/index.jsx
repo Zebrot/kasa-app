@@ -5,6 +5,7 @@ import nextArrow from '../../assets/next.svg'
 
 function Carousel({imgList}){
     const [currentSlide, setCurrentSlide] = useState(0);
+    
     const slides = imgList.map((x,i) => 
         <div className="carousel__Slide" key={i}>
             <img src = {x}/>
@@ -13,6 +14,7 @@ function Carousel({imgList}){
 
     return (
         <div className="carousel">
+            <div className="loading" style={{display: 'none'}}>{slides}</div> {/*Loading imgs before they're displayed*/}
             {slides[currentSlide]}
             {imgList.length > 1 && <div className="carousel__Options">
                 <div className="carousel__Options__Buttons">

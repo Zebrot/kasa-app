@@ -26,7 +26,7 @@ a {
 .logement-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     border-radius: 25px;
     padding: 55px;
     gap: 55px;
@@ -71,7 +71,7 @@ a {
     }
     .logement-cards {
         padding: 35px;
-        gap: 35px;
+        gap: 50px;
     }
     .aboutList {
         width: 100%;

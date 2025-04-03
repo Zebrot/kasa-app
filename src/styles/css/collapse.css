@@ -16,6 +16,7 @@
   padding: 10px 20px 10px 10px;
   cursor: pointer;
   color: white;
+  font-size: 18px;
 }
 .collapse__Title__Arrow {
   transition: 0.4s;
@@ -37,6 +38,20 @@
 }
 .show .collapse__Content {
   max-height: 200px;
+}
+
+@media (max-width: 540px) {
+  .collapse__Title {
+    height: 30px;
+    font-size: 13px;
+  }
+  .collapse__Title__Arrow {
+    height: 16px;
+  }
+  .collapse__Content p {
+    padding: 10px;
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=collapse.css.map */

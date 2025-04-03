@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, ScrollRestoration, BrowserRouter } from 'react-router-dom'
 import Home from './pages/Home/index.jsx'
 import FicheLogement from './pages/Fiche-logement/index.jsx'
 import About from './pages/About/index.jsx'
@@ -9,9 +9,9 @@ import Header from './components/Header/index.jsx'
 import Footer from './components/Footer/index.jsx'
 import './styles/css/global.css'
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Router>
+    <BrowserRouter>
       <main className = "main-container">
         <Header />
         <Routes>
@@ -21,8 +21,8 @@ createRoot(document.getElementById('root')).render(
           <Route path='/404' element={<Unknown />} />
           <Route path="*" element={<Unknown />} />
         </Routes>
-      </main>  
+      </main>
       <Footer />
-    </Router>
+    </BrowserRouter>
   </StrictMode>,
-)
+);

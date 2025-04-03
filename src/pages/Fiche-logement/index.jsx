@@ -12,11 +12,20 @@ import { useState } from 'react'
 
 function FicheLogement() {
     const id =  getIdFromURL();
-
+    const navigate = useNavigate();
     const logement = logements.filter(x => x.id == id)[0];
+
+    useEffect(()=> { // Triggers on mount
+        if(!logement)
+            navigate('/404');
+    },[]);
+
+    if (!logement) // On doit return quelque chose.
+        return (<div></div>);
+
     const tags = logement.tags.map((x,i) => <Tag value ={x} key={i}/>);
     const equipments = logement.equipments.map((x,i) => <li key={i}> {x} </li>);
-    
+
     return (
         <div className="logement">
             <Carousel imgList = {logement.pictures}/>

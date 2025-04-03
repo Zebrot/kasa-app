@@ -12,3 +12,10 @@
     font-size: 14px;
     font-weight: 700;
 }
+
+@media (max-width: 540px){
+    .tag {
+        font-size: 10px;
+        min-width: 55px;
+    }
+}
