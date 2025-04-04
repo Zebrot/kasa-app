@@ -4,7 +4,7 @@ import bannerImg from '../../assets/img/banner.png'
 import logements from '../../assets/logements.json'
 import {Link} from 'react-router-dom'
 
-function App() {
+function Home() {
   var cards = logements.map((x,i) => 
   <Link key = {i} to={`/logement?id=${x.id}`}>
     <Card title = {x.title} imgUrl = {x.cover} key={x.id}/>
@@ -22,4 +22,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

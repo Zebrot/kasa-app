@@ -7,7 +7,9 @@ function Header() {
   
     return (
         <nav className='navbar'>
-            <img className = 'navbar__logo' src = {kasaLogo} />
+            <Link to='/'>
+                <img className = 'navbar__logo' src = {kasaLogo} />
+            </Link>
             <div className = 'navbar__links'>
                 <Link className = {location.pathname == '/' ? "current" : ""} to = "/">Accueil</Link>
                 <Link className = {location.pathname == '/about' ? "current" : ""} to = "/about">A Propos</Link>
