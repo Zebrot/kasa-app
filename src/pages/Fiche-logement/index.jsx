@@ -18,6 +18,7 @@ function FicheLogement() {
     useEffect(()=> { // Triggers on mount
         if(!logement)
             navigate('/404');
+        scrollToTop();
     },[]);
 
     if (!logement) // On doit return quelque chose.
@@ -65,5 +66,8 @@ function getIdFromURL() {
     return id;
 }
 
+function scrollToTop() {
+    window.scrollTo(0, 0)
+}
 export default FicheLogement
 

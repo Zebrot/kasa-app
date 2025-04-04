@@ -3,8 +3,10 @@ import '../../styles/css/card.css'
 function Card({title, imgUrl}) {
     return (
         <article className = "card">
-            <h2> {title} </h2>
-            <img alt = "Le nom du logement" src ={imgUrl}/>
+            <div className='title'>
+                <h2> {title} </h2>
+            </div>
+            <img alt = {title} src ={imgUrl}/>
         </article>
     )
 }
